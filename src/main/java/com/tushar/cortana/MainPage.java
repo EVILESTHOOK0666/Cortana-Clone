@@ -123,7 +123,7 @@ public class MainPage extends AppCompatActivity {
 
 
         watsonAssistant = new Assistant("2018-02-28", new IamOptions.Builder()
-                .apiKey("NjtcJc1OvF5-CnQvf_OgEfrF0pwhzOU_LAYhAwle-2SP")
+                .apiKey("XXXXXXXXXX_XXXXXXXXXXXXXXXXXXX")
                 .build());
         watsonAssistant.setEndPoint("https://gateway-lon.watsonplatform.net/assistant/api");
 
@@ -198,7 +198,7 @@ public class MainPage extends AppCompatActivity {
                                         .text(inputmessage)
                                         .build();
                                 MessageOptions options = new MessageOptions.Builder()
-                                        .assistantId("b08c44f2-2f5a-4f3f-9666-54ae9be7a6bb")
+                                        .assistantId("XXXXXXXXXXXXXXXX_XXXXXXXXXXXXXXXXXXXXX")
                                         .input(input)
                                         .sessionId(watsonAssistantSession.getSessionId())
                                         .build();
@@ -238,11 +238,11 @@ public class MainPage extends AppCompatActivity {
 
                                         // Your API key
                                         // TODO replace with your value
-                                        String key="AIzaSyAJD6s89FxsWImcwFBBQ7w2q5cGZ2j02qg";
+                                        String key="XXXXXXXXXXXXXXXXXXXXXXX_XXXXXXXXXXXXXXXXXXXX";
 
                                         // Your Search Engine ID
                                         // TODO replace with your value
-                                        String cx = "006889087434720476417:aaedxkhnhtn";
+                                        String cx = "XXXXXXXXXXXXXXXXXX";
 
                                         String urlString = "https://www.googleapis.com/customsearch/v1?q=" + searchStringNoSpaces + "&key=" + key + "&cx=" + cx + "&alt=json";
                                         URL url = null;
@@ -348,7 +348,7 @@ public class MainPage extends AppCompatActivity {
                                                     .text(inputmessage)
                                                     .build();
                                             MessageOptions options = new MessageOptions.Builder()
-                                                    .assistantId("b08c44f2-2f5a-4f3f-9666-54ae9be7a6bb")
+                                                    .assistantId("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                                                     .input(input)
                                                     .sessionId(watsonAssistantSession.getSessionId())
                                                     .build();
@@ -384,11 +384,11 @@ public class MainPage extends AppCompatActivity {
 
                                                     // Your API key
                                                     // TODO replace with your value
-                                                    String key="AIzaSyAJD6s89FxsWImcwFBBQ7w2q5cGZ2j02qg";
+                                                    String key="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
                                                     // Your Search Engine ID
                                                     // TODO replace with your value
-                                                    String cx = "006889087434720476417:aaedxkhnhtn";
+                                                    String cx = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
                                                     String urlString = "https://www.googleapis.com/customsearch/v1?q=" + searchStringNoSpaces + "&key=" + key + "&cx=" + cx + "&alt=json";
                                                     URL url = null;
@@ -551,43 +551,6 @@ public class MainPage extends AppCompatActivity {
 
     private String send_message(){
         results="Some error Occured,Sorry";
-
-//        final String inputmessage = inputMessage;
-//        Thread thread = new Thread(new Runnable() {
-//            public void run() {
-//                try {
-//
-//                    if (watsonAssistantSession == null) {
-//                        ServiceCall<SessionResponse> call = watsonAssistant.createSession(new CreateSessionOptions.Builder().assistantId("b08c44f2-2f5a-4f3f-9666-54ae9be7a6bb").build());
-//                        watsonAssistantSession = call.execute().getResult();
-//                    }
-//
-//                    MessageInput input = new MessageInput.Builder()
-//                            .text(inputmessage)
-//                            .build();
-//                    MessageOptions options = new MessageOptions.Builder()
-//                            .assistantId("b08c44f2-2f5a-4f3f-9666-54ae9be7a6bb")
-//                            .input(input)
-//                            .sessionId(watsonAssistantSession.getSessionId())
-//                            .build();
-//
-//                    MessageResponse response = watsonAssistant.message(options).execute().getResult();
-//                    Log.i(TAG, "run: "+response);
-//                    final Message outMessage = new Message();
-//                    if (response != null &&
-//                            response.getOutput() != null &&
-//                            !response.getOutput().getGeneric().isEmpty() &&
-//                            "text".equals(response.getOutput().getGeneric().get(0).getResponseType())) {
-//                            results=response.getOutput().getGeneric().get(0).getText();
-//                            System.out.println(results);
-//                    }
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//
-//        thread.start();
 
         return results;
     }
